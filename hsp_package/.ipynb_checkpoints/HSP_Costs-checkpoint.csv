@@ -1,0 +1,88 @@
+Solvents,dD,dP,dH,MVol,Cost,Health,Fire,Reactivity,Stock
+Acetone,15.5,10.4,7,73.8,0.922920548,1,3,0,TRUE
+Acetonitrile,15.3,18,6.1,52.9,0.960365746,,,,FALSE
+n-Amyl Acetate,15.8,3.3,6.1,148,0.257989768,,,,FALSE
+n-Amyl Alcohol,15.9,5.9,13.9,108.6,0.626177536,,,,FALSE
+Benzene,18.4,0,2,52.9,0.968166462,,,,FALSE
+Benzyl Alcohol,18.4,6.3,13.7,103.8,0.087599344,1,3,0,FALSE
+Benzyl Benzoate,20,5.1,5.2,190.3,0.78026277,,,,FALSE
+1-Butanol,16,5.7,15.8,92,0.455802704,,,,FALSE
+2-Butanol,15.8,5.7,14.5,92,0.976877469,,,,FALSE
+n-Butyl Acetate,15.8,3.7,6.3,132.6,0.964162741,,,,FALSE
+t-Butyl Acetate,15,3.7,6,134.8,0.445809729,,,,FALSE
+t-Butyl Alcohol,15.2,5.1,14.7,96,0.68872879,,,,FALSE
+Butyl Benzoate,18.3,5.6,5.5,178.1,0.761023609,,,,FALSE
+Butyl Diglycol Acetate,16,4.1,8.2,208.2,0.382776225,,,,FALSE
+Butyl Glycol Acetate,15.3,7.5,6.8,171.2,0.225003546,,,,FALSE
+n-Butyl Propionate,15.7,5.5,5.9,149.3,0.850612105,,,,FALSE
+Caprolactone (Epsilon),19.7,15,7.4,110.8,0.051473657,2,2,0,TRUE
+Chloroform,17.8,3.1,5.7,80.5,0.29122427,,,,FALSE
+m-Cresol,18.5,6.5,13.7,105,0.199412069,,,,FALSE
+Cyclohexane,16.8,0,0.2,108.9,0.564546049,,,,FALSE
+Cyclohexanol,17.4,4.1,13.5,105.7,0.256764514,,,,FALSE
+Cyclohexanone,17.8,8.4,5.1,104.2,0.722721904,,,,FALSE
+Di-isoButyl Ketone,16,3.7,4.1,177.4,0.021668011,,,,FALSE
+Diacetone Alcohol,15.8,8.2,10.8,124.3,0.429372549,,,,FALSE
+Diethyl Ether,14.5,2.9,4.6,104.7,0.820073931,,,,FALSE
+Diethylene Glycol Monobutyl Ether,16,7,10.6,170.4,0.57558858,,,,FALSE
+Dimethyl Cyclohexane,16.1,0,1.1,140,0.592493847,,,,FALSE
+Dimethyl Sulfoxide (DMSO),18.4,16.4,10.2,71.3,0.084158925,1,2,0,FALSE
+"1,4-Dioxane",17.5,1.8,9,85.7,0.668834012,,,,FALSE
+"1,3-Dioxolane",18.1,6.6,9.3,69.9,0.514770563,,,,FALSE
+Dipropylene Glycol,16.5,10.6,17.7,131.8,0.415633722,,,,FALSE
+Dipropylene Glycol Methyl Ether,15.5,5.7,11.2,156.1,0.663555996,,,,FALSE
+Dipropylene Glycol Mono n-Butyl Ether,15.7,6.5,10,211.2,0.721313932,,,,FALSE
+Ethanol,15.8,8.8,19.4,58.6,0.144339957,2,3,0,TRUE
+Ethyl Acetate,15.8,5.3,7.2,98.6,0.49762118,,,,FALSE
+Ethyl Benzene,17.8,0.6,1.4,122.8,0.404882157,,,,FALSE
+Ethyl Lactate,16,7.6,12.5,115,0.153235676,,,,FALSE
+Ethylene Carbonate,18,21.7,5.1,66,0.63452444,,,,FALSE
+Ethylene Glycol,17,11,26,55.9,0.113361912,,,,FALSE
+Ethylene Glycol Monobutyl Ether,16,5.1,12.3,132,0.121583053,,,,FALSE
+Ethylene Glycol Monomethyl Ether,16,8.2,15,79.3,0.255950938,,,,FALSE
+gamma-Butyrolactone (GBL),18,16.6,7.4,76.5,0.207898141,,,,FALSE
+Glycerol Carbonate,17.9,25.5,17.4,83.2,0.967039627,,,,FALSE
+Heptane,15.3,0,0,147,0.299327902,,,,FALSE
+Hexane,14.9,0,0,131.4,0.129321778,,,,FALSE
+Iso-Butanol,15.1,5.7,15.9,92.9,0.781122885,,,,FALSE
+Iso-Butyl Isobutyrate,15.1,2.8,5.8,169.8,0.487149562,,,,FALSE
+Iso-Pentyl Acetate,15.3,3.1,7,150.2,0.992485933,,,,FALSE
+iso-Pentyl Alcohol,15.8,5.2,13.3,109.3,0.571974499,,,,FALSE
+Iso-Propyl Acetate,14.9,4.5,8.2,117.1,0.285990565,,,,FALSE
+Iso-Propyl Ether,15.1,3.2,3.2,141.8,0.436079817,,,,FALSE
+Isophorone,17,8,5,150.3,0.169722074,,,,FALSE
+d-Limonene,17.2,1.8,4.3,162.9,0.178940052,,,,FALSE
+Methanol,14.7,12.3,22.3,40.6,0.34905423,,,,FALSE
+Methyl Acetate,15.5,7.2,7.6,79.8,0.757073261,,,,FALSE
+Methyl Carbitol,16.2,7.8,12.6,118.2,0.72412431,,,,FALSE
+Methyl Cellosolve,16,8.2,15,79.3,0.231970499,,,,FALSE
+Methyl Cyclohexane,16,0,1,128.2,0.209925962,,,,FALSE
+Methyl Ethyl Ketone (MEK),16,9,5.1,90.2,0.323367447,,,,FALSE
+Methyl iso-Amyl Ketone,16,5.7,4.1,141.3,0.416195561,,,,FALSE
+Methyl iso-Butyl Carbinol,15.4,3.3,12.3,127.2,0.389863112,,,,FALSE
+Methyl Iso-Butyl Ketone (MIBK),15.3,6.1,4.1,125.8,0.071754206,,,,FALSE
+Methyl Oleate,16.2,3.8,4.5,340.7,0.175345596,,,,FALSE
+Methyl Propyl Ketone,16,7.6,4.7,107.3,0.803774868,,,,FALSE
+N-Methyl-2-Pyrrolidone (NMP),18,12.3,7.2,96.6,0.29935591,,,,FALSE
+Methylene Chloride,17,7.3,7.1,64.4,0.383127422,,,,FALSE
+"N,N-Dimethyl Acetamide",16.8,11.5,10.2,93,0.678094718,,,,FALSE
+"N,N-Dimethyl Formamide (DMF)",17.4,13.7,11.3,77.4,0.177010993,2,2,0,FALSE
+1-Nitropropane,16.6,12.3,5.5,89.5,0.022854323,,,,FALSE
+2-Phenoxy Ethanol,17.8,5.7,14.3,124.7,0.849604434,,,,FALSE
+2-Propanol,15.8,6.1,16.4,76.9,0.537347946,,,,FALSE
+1-Propanol,16,6.8,17.4,75.1,0.488883381,,,,FALSE
+n-Propyl Acetate,15.3,4.3,7.6,115.8,0.000175175,,,,FALSE
+n-Propyl Propanoate,15.5,5.6,5.7,132.5,0.583995347,,,,FALSE
+Propylene Carbonate,20,18,4.1,85.2,0.803959455,,,,FALSE
+Propylene Glycol Monobutyl Ether,15.3,4.5,9.2,132,0.345746024,,,,FALSE
+Propylene Glycol Monoethyl Ether Acetate,15.6,6.3,7.7,155.1,0.262931977,,,,FALSE
+Propylene Glycol Monomethyl Ether,15.6,6.3,11.6,98.2,0.240401536,,,,FALSE
+Propylene Glycol Monomethyl Ether Acetate,15.6,5.6,9.8,137.1,0.817545084,,,,FALSE
+Propylene Glycol Phenyl Ether,17.4,5.3,11.5,143.2,0.464158242,,,,FALSE
+sec-Butyl Acetate,15,3.7,7.6,134,0.053180818,,,,FALSE
+Sulfolane (Tetramethylene Sulfone),18,18,9.9,95.3,0.249642675,,,,FALSE
+Tetrahydrofuran (THF),16.8,5.7,8,81.9,0.131692987,,,,FALSE
+Tetrahydrofurfuryl Alcohol,17.8,8.2,12.9,97.4,0.777972302,,,,FALSE
+Triethyl Phosphate (TEP),16.8,11.5,9.2,73.8,0.724673942,2,1,0,FALSE
+Toluene,18,1.4,2,106.6,0.393219082,,,,FALSE
+Xylene,17.6,1,3.1,123.9,0.119955808,,,,FALSE
