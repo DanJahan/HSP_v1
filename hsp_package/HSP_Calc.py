@@ -7,7 +7,7 @@ from scipy.optimize import minimize
 print(os.getcwd())
 
 #Imports the solvents .cvs file into 'filePath' for storage 
-filePath = r'hsp_packge/HSP_Costs.csv'
+filePath = r's24-06643/sse/Test420/HSP_v1/hsp_package/HSP_Costs.csv'  
 
 #Uses Pandas library to read the .csv file into SOLVENTS, turns the data into rows in rowsList
 SOLVENTS = pd.read_csv(filePath, header = 0)

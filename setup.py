@@ -8,7 +8,6 @@ setup(
     maintainer="Dan Jahanian",
     maintainer_email="dan.jahanian@gmail.com",
     license="MIT",
-    packages=["hsp_packge"],
-    scripts=["HSP_Calc.py"],
+    packages=["hsp_package"],
     long_description="""Hansen Solubility Parameter Calculator""",
 )
