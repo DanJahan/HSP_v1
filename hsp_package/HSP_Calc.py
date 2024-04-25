@@ -49,7 +49,12 @@ solvents.close()
 # Opens solvents shelve
 solvents = sv.open("solvents")
 
-# stores the solvent dictionary in Sols for use in the functions/constraints below
+# stores the# Run minimize() with the pared down solvent list
+limitAns = minimize(
+  runcost,
+    np.ones(len(Sols)) / len(Sols),
+    constraints=[{"type": "ineq", "fun": f} for f in [c1, c2]]
+    + [{"type": "eq", "fun": Equa solvent dictionary in Sols for use in the functions/constraints below
 Sols = solvents["solvents"]
 
 # Close the solvents shelve
@@ -170,7 +175,7 @@ if filterNFPA not in range(2):
 # Checks that the user entered NFPA values are valid
 if filterNFPA == 1:
     if Max_NFPA_Health not in range(5):
-        print("Unknown Health NFPA value. Please enter a whole number between 0 and 4.")
+        print("Unknown Healbool([3, 3, 4])th NFPA value. Please enter a whole number between 0 and 4.")
 
     if Max_NFPA_Fire not in range(5):
         print("Unknown Health NFPA value. Please enter a whole number between 0 and 4.")
@@ -194,7 +199,7 @@ if filterInStock == 1:
 
 # Removes any solvents that have a NFPA value greater than the user inputted values
 if filterNFPA == 1:
-    Sols = [sol for sol in Sols if sol["nfpa"][0] <= Max_NFPA_Health]
+    Sols = [sol for solan in Sols if sol["nfpa"][0] <= Max_NFPA_Health]
     Sols = [sol for sol in Sols if sol["nfpa"][1] <= Max_NFPA_Fire]
     Sols = [sol for sol in Sols if sol["nfpa"][2] <= Max_NFPA_Reactivity]
 
@@ -217,11 +222,11 @@ def SumSqr(A, B):
     return diff
 
 
-def Cost(L):
+def Cost(L, *, solventsList):
     """Cost function that will be used to in the minimize function."""
     cost = 0
-    for i in range(len(Sols)):
-        cost += L[i] * Sols[i]["cost"]
+    for i in range(len(solventsList)):
+        cost += L[i] * solventsList[i]["cost"]
     return cost
 
 
@@ -248,10 +253,15 @@ def c2(L):
     return n
 
 
+
+def runcost(L):
+  return Cost(L, solventsList = Sols)
+  
 # runs minimize() on Cost()
 if runMode == 0:
+    print("Running!")
     ans = minimize(
-        Cost,
+      runcost,
         np.ones(len(Sols)) / len(Sols),
         constraints=[{"type": "ineq", "fun": f} for f in [c1, c2]]
         + [{"type": "eq", "fun": Equal1}],
@@ -261,7 +271,7 @@ if runMode == 0:
 # runs minimize() on BlendDist()
 elif runMode == 1:
     ans = minimize(
-        BlendDist,
+        BlendDist, 
         np.ones(len(Sols)) / len(Sols),
         constraints=[{"type": "ineq", "fun": f} for f in [c1]]
         + [{"type": "eq", "fun": Equal1}],
@@ -275,7 +285,7 @@ Sols = [Sols[list(ans.x).index(b)] for b in sorted(list(ans.x), reverse=True)[:M
 
 # Run minimize() with the pared down solvent list
 limitAns = minimize(
-    Cost,
+  runcost,
     np.ones(len(Sols)) / len(Sols),
     constraints=[{"type": "ineq", "fun": f} for f in [c1, c2]]
     + [{"type": "eq", "fun": Equal1}],
@@ -292,4 +302,4 @@ for i, j in enumerate(rounded):
     if j > 0.0:
         print(f'{round(j*100,3)}% {Sols[i]["name"]}')
 print(f"has parameters of {np.round(solventblend(rounded, Sols),2)}.")
-print(f"The cost of the solvent blend is ${np.round(Cost(rounded), 3)} per liter.")
+print(f"The cost of the solvent blend is ${np.round(Cost(rounded, solventsList = Sols), 3)} per liter.")
