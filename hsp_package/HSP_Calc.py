@@ -1,16 +1,14 @@
+"""Docstring for HSP_Calc file."""
+
 import shelve as sv  # data perstance: used to store a list of solvents in a shelve
 import numpy as np
 import pandas as pd
 import os
 from scipy.optimize import minimize
 
-print(os.getcwd())
-
 # Imports the solvents .cvs file into 'filePath' for storage
 path = os.getcwd()
-
 filePath = f"{path}/HSP_v1/hsp_package/HSP_Costs.csv"
-# filePath = /home/jupyter-djahania@andrew.cm-476a5/s24-06643/sse/Final_Project/HSP_v1/hsp_package/HSP_Costs.csv
 
 
 # Uses Pandas library to read the .csv file into SOLVENTS, turns the data into rows in rowsList
@@ -83,7 +81,7 @@ TolParam = 0.5
 
 # Enter 0 include solvents that are not in stock
 # Enter 1 to filter out solvents that are not in stock
-##The default is 1
+# The default is 1
 filterInStock = 0
 
 # Enter 0 include solvents that do not have cost data associated with them
@@ -153,8 +151,8 @@ try:
         )
 except:
     print(
-        "Could not understand input. Please enter a number greater than or equal to 0."
-    )
+            "Could not understand input. Please enter a number greater than or equal to 0."
+        )
 
 
 # Checks that the user entered fliterCost is valid
@@ -200,8 +198,9 @@ if filterNFPA == 1:
     Sols = [sol for sol in Sols if sol["nfpa"][1] <= Max_NFPA_Fire]
     Sols = [sol for sol in Sols if sol["nfpa"][2] <= Max_NFPA_Reactivity]
 
-# Creates blended solvent parameters based on the proportions of solvents used
+
 def solventblend(SolAmount, Sols):
+    """Create blended solvent parameters based on the proportions of solvents used."""
     props = np.zeros(len(Param))  # Varaible for storing the parameters
     for i in range(
         len(Sols)
@@ -210,39 +209,41 @@ def solventblend(SolAmount, Sols):
     return props
 
 
-# Square of euclidean distances
 def SumSqr(A, B):
+    """Square of euclidean distances."""
     diff = A - B
     diff = diff**2
     diff = sum(diff)
     return diff
 
 
-# Cost function that will be used to in the minimize function
 def Cost(L):
+    """Cost function that will be used to in the minimize function."""
     cost = 0
     for i in range(len(Sols)):
         cost += L[i] * Sols[i]["cost"]
     return cost
 
 
-# Function that finds square of euclidean distances between the target blend parameters
-# and a given blend's parameters
 def BlendDist(L):
+    """Find square of euclidean distances between the target blend parameters and a given blend's parameters."""
     return SumSqr(solventblend(L, Sols), Param)
 
 
 # Constraints
-def Equal1(L):  # ensures the blend of solvents adds to 1 (100%)
+def Equal1(L):
+    """Ensure the blend of solvents adds to 1 (100%)."""
     return 1 - sum(L)
 
 
-def c1(L):  # ensures no amount of solvent used is negative
+def c1(L):
+    """Ensure no amount of solvent used is negative."""
     m = min(L)
     return m
 
 
-def c2(L):  # ensures the blend of solvent parameters stays within the tolerance
+def c2(L):
+    """Ensure the blend of solvent parameters stays within the tolerance."""
     n = (TolParam**2) - SumSqr(solventblend(L, Sols), Param)
     return n
 
@@ -286,7 +287,7 @@ rounded = np.round(limitAns.x, 3)
 
 # Uses an if statement to match the parameter with the correct solvent and prints the results
 print(f"The targeted parameters are {Param}.")
-print(f"An optimized solvent blend of")
+print("An optimized solvent blend of")
 for i, j in enumerate(rounded):
     if j > 0.0:
         print(f'{round(j*100,3)}% {Sols[i]["name"]}')
