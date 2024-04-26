@@ -3,7 +3,7 @@ import hsp_package
 
 class TestClass:
     def test_one(self):
-        assert hsp_package.c1([1, 2, 3]) == 1
+        assert hsp_package.NoNegativeSols([1, 2, 3]) == 1
 
     def test_two(self):
         assert (
@@ -14,4 +14,4 @@ class TestClass:
         )
 
     def test_three(self):
-        assert hsp_package.Equal1([0.5, 0.25, 0]) == 0.25
+        assert hsp_package.EqualTo1([0.5, 0.25, 0]) == 0.25
