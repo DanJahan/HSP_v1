@@ -1,5 +1,6 @@
 """Docstring for HSP_Functions file."""
 
+#Import relevant libraries
 import shelve as sv  # data perstance: used to store a list of solvents in a shelve
 import numpy as np
 import pandas as pd
@@ -10,7 +11,7 @@ from scipy.optimize import minimize
 ##############################################
 #   Create the shelve file from .csv file
 ##############################################
-def Create_Shelve(file_ext="/HSP_v1/hsp_package/HSP_Costs.csv"):
+def Create_Shelve(file_ext = "/HSP_v1/hsp_package/HSP_Costs.csv"):
   """Create shelve file."""
 
   # Imports the solvents .cvs file into 'filePath' for storage
@@ -172,7 +173,7 @@ def filterCost(sols):
 
 def filterInStock(sols):
   """If the filterStock parameter is on, remove any solvents from the list that are not in stock."""
-  sols = [sol for sol in sols if sol["stock"] == True]
+  sols = [sol for sol in sols if sol["stock"]]
   return sols
 
 
